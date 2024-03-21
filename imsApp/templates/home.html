@@ -1,0 +1,244 @@
+{% extends "base.html" %} {% load humanize %} {% load customfilter %} {% block pageContent %}
+
+<!--Section: Content-->
+<section class="">
+    
+    <div style=" width: 80%;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;" class="grid-parent-div">
+        <div style="position: relative;
+        width: 28%;
+        height: 200px;
+        background-color: #ffdcc2;
+        box-sizing: border-box;
+        margin-bottom: 10vh;
+        border-radius: 15px;
+        display: flex;" class="grid-child-div">
+             <h2 style="position: absolute;
+             left: 20px; margin-top: 10px; font-size:large; font-weight:bold; color: black;" >PROFILE</h2>
+            <img style=" height: auto; position: absolute; top: 20%; border-radius: 10px; position: absolute;
+            width: 30%; right: 20px;
+            height: auto;" src="media/default/profile.gif" alt="">
+            <div style="position: absolute;
+            height: 4px;
+            width: 100%;
+            background-color: white;
+            bottom: 50px;" class="seperator"></div>
+            <p style="position: absolute;
+            display: flex;
+            bottom: 0px; color: black;
+            left: 20px;">EXPLORE</p>
+            <a href="{% url 'profile' %}"><img style="position: absolute;
+                height: 25px;
+                width: auto;
+                right: 20px;
+                bottom: 13px;   
+                " src="media/default/right-arrow.png" alt="">
+        </div>
+        <div style="position: relative;
+        width: 28%;
+        height: 200px;
+        background-color: #ffdcc2;
+        box-sizing: border-box;
+        margin-bottom: 10vh;
+        border-radius: 15px;
+        display: flex;" class="grid-child-div">
+             <h2 style="position: absolute;
+             left: 20px; margin-top: 10px; font-size:large; font-weight:bold; color: black;" >CATEGORIES</h2>
+            <img style=" height: auto; position: absolute; top: 20%; border-radius: 10px; position: absolute;
+            width: 30%; right: 20px;
+            height: auto;" src="media/default/list.gif" alt="">
+            <div style="position: absolute;
+            height: 4px;
+            width: 100%;
+            background-color: white;
+            bottom: 50px;" class="seperator"></div>
+            <p style="position: absolute;
+            display: flex;
+            bottom: 0px; color: black;
+            left: 20px;">EXPLORE</p>
+            <a href="{% url 'category-page' %}"><img style="position: absolute;
+                height: 25px;
+                width: auto;
+                right: 20px;
+                bottom: 13px;   
+                " src="media/default/right-arrow.png" alt="">
+            </a>
+        </div>
+        <div  style="position: relative;
+        width: 28%;
+        height: 200px;
+        background-color: #ffdcc2;
+        box-sizing: border-box;
+        margin-bottom: 10vh;
+        border-radius: 15px;
+        display: flex;" class="grid-child-div">
+             <h2 style="position: absolute;
+             left: 20px; margin-top: 10px; font-size:large; font-weight:bold; color: black;" >PRODUCTS</h2>
+            <img style=" height: auto; position: absolute; top: 20%; border-radius: 10px; position: absolute;
+            width: 30%; right: 20px;
+            height: auto;" src="media/default/dairy-products.gif" alt="">
+            <div style="position: absolute;
+            height: 4px;
+            width: 100%;
+            background-color: white;
+            bottom: 50px;" class="seperator"></div>
+            <p style="position: absolute;
+            display: flex;
+            bottom: 0px; color: black;
+            left: 20px;">EXPLORE</p>
+            <a href="{% url 'product-page' %}"><img style="position: absolute;
+                height: 25px;
+                width: auto;
+                right: 20px;
+                bottom: 13px;   
+                " src="media/default/right-arrow.png" alt="">
+        </div>
+        <div  style="position: relative;
+        width: 28%;
+        height: 200px;
+        background-color: #ffdcc2;
+        box-sizing: border-box;
+        margin-bottom: 10vh;
+        border-radius: 15px;
+        display: flex;" class="grid-child-div">
+            <h2 style="position: absolute;
+            left: 20px; margin-top: 10px; font-size:large; font-weight:bold; color: black;" >INVENTORY</h2>
+            <img style=" height: auto; position: absolute; top: 20%; border-radius: 10px; position: absolute;
+            width: 30%; right: 20px;
+            height: auto;" src="media/default/clipboard (1).gif" alt="">
+            <div style="position: absolute;
+            height: 4px;
+            width: 100%;
+            background-color: white;
+            bottom: 50px;" class="seperator"></div>
+            <p style="position: absolute;
+            display: flex;
+            bottom: 0px; color: black;
+            left: 20px;">EXPLORE</p>
+            <a href="{% url 'inventory-page' %}"><img style="position: absolute;
+                height: 25px;
+                width: auto;
+                right: 20px;
+                bottom: 13px;   
+                " src="media/default/right-arrow.png" alt="">
+        </div>
+        <div  style="position: relative;
+        width: 28%;
+        height: 200px;
+        background-color: #ffdcc2;
+        box-sizing: border-box;
+        margin-bottom: 10vh;
+        border-radius: 15px;
+        display: flex;" class="grid-child-div">
+             <h2 style="position: absolute;
+             left: 20px; margin-top: 10px; font-size:large; font-weight:bold; color: black;" >ITEMS</h2>
+            <img style=" height: auto; position: absolute; top: 20%; border-radius: 10px; position: absolute;
+            width: 30%; right: 20px;
+            height: auto;" src="media/default/new-item.gif" alt="">
+            <div style="position: absolute;
+            height: 4px;
+            width: 100%;
+            background-color: white;
+            bottom: 50px;" class="seperator"></div>
+            <p style="position: absolute;
+            display: flex;
+            bottom: 0px; color: black;
+            left: 20px;">EXPLORE</p>
+           <a href="{% url 'sales-page' %}"><img style="position: absolute;
+            height: 25px;
+            width: auto;
+            right: 20px;
+            bottom: 13px;   
+            " src="media/default/right-arrow.png" alt="">
+        </div>
+        <div  style="position: relative;
+        width: 28%;
+        height: 200px;
+        background-color: #ffdcc2;
+        box-sizing: border-box;
+        margin-bottom: 10vh;
+        border-radius: 15px;
+        display: flex;" class="grid-child-div">
+           <h2 style="position: absolute;
+           left: 20px; margin-top: 10px; font-size:large; font-weight:bold; color: black;" >REPORT</h2>
+            <img style=" height: auto; position: absolute; top: 20%; border-radius: 10px; position: absolute;
+            width: 30%; right: 20px;
+            height: auto;" src="media/default/presentation.gif" alt="">
+            <div style="position: absolute;
+            height: 4px;
+            width: 100%;
+            background-color: white;
+            bottom: 50px;" class="seperator"></div>
+            <p style="position: absolute;
+            display: flex;
+            bottom: 0px; color: black;
+            left: 20px;">EXPLORE</p>
+            <a href="{% url 'invoice-page' %}"><img style="position: absolute;
+                height: 25px;
+                width: auto;
+                right: 20px;
+                bottom: 13px;   
+                " src="media/default/right-arrow.png" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card rounded-0 shadow text-start summary-card my-3" style="border-color: #004D61;">
+                <div class="card-body">
+                    <div class="d-flex w-100">
+                        <div class="col-8 pe-2">
+                            <div class="summary-title fs-5 border-bottom">Total Categories</div>
+                            <div class="summary-count text-end fw-bolder mt-3 px-4">{{ categories|intcomma }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="summary-icon p-3 rounded border text-center bg-gradient bg-light">
+                                <i class="fa fa-list"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card rounded-0 shadow text-start summary-card my-3" style="border-color: #348498;">
+                <div class="card-body">
+                    <div class="d-flex w-100">
+                        <div class="col-8 pe-2">
+                            <div class="summary-title fs-5 border-bottom">Total Products</div>
+                            <div class="summary-count text-end fw-bolder mt-3 px-4">{{ products|intcomma }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="summary-icon p-3 rounded border text-center bg-gradient bg-light">
+                                <i class="fa fa-boxes fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card rounded-0 shadow text-start summary-card my-3" style="border-color: #FF502F;">
+                <div class="card-body">
+                    <div class="d-flex w-100">
+                        <div class="col-8 pe-2">
+                            <div class="summary-title fs-5 border-bottom">Total Transactions</div>
+                            <div class="summary-count text-end fw-bolder mt-3 px-4">{{ sales|intcomma }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="summary-icon p-3 rounded border text-center bg-gradient bg-light">
+                                <i class="fa fa-file-invoice fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+
+</div> {% endblock pageContent %}
